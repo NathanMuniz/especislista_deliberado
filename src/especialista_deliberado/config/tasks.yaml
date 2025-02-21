@@ -20,3 +20,16 @@ plano_estudos:
     Uma lista de atividade do básico até o avançado aplicando princípios de prática deliberada
     em função do usuário ao seguir a lista aprender e ser um expert
   agent: professor_expert
+
+
+organiza_estudos:
+  description: >
+    Organiza os estudos diários do usuário a partir do objetivo.
+    Entende as atividade necessárias e cria divida as tarefaz 
+    em horário específicos
+    Aplica a prática deliberada na criação dessa subtarefaz
+    Diz o o que usuário tem que validar no final de cada tarefa 
+  expected_output: >
+    Retorna uma lista de tarefaz e sessões. Dizendo qual resultado
+    final o usuário tem que ter após cada sessão.
+  agent: organiza_tarefaz

@@ -18,7 +18,8 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'React'
+        'topic': 'Musíca',
+        'objetivo': 'Quero aprender música do zero. Irei estudar 3h por dia. '
     }
     
     try:
