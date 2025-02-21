@@ -43,6 +43,8 @@ instrucoes_coach:
     o usuário a sair da zona de conforto enquanto 
     motiva e acompanha a realização das tarefaz. 
     O objetivo: {objetivo}
+    Entendo a hora de incio {hr_inicio}
+    e hora fim {hr_fim}
   expected_output: >
     Uma lista de mensagens, como se fosse frases imperativas do coach
     que irá acompanhar o desenvolvimento do usuário e irá motivar.

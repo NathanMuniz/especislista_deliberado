@@ -15,8 +15,10 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'Musíca',
-        'objetivo': 'Quero aprender música do zero. Irei estudar 3h por dia. '
+        'topic': 'Investimento',
+        'objetivo': 'Queor aprender sobre investimentos. E vou estudar 2h por dia sobre. ',
+        'hr_inicio': '13:00',
+        'hr_fim': '15:00'
     }
     
     try:
