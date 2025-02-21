@@ -33,3 +33,20 @@ organiza_estudos:
     Retorna uma lista de tarefaz e sessões. Dizendo qual resultado
     final o usuário tem que ter após cada sessão.
   agent: organiza_tarefaz
+
+
+instrucoes_coach:
+  description: >
+    Recebe uma lista de atiidades e cria instrucoes de
+    forma imperativa para que o usuário realize as atividades.
+    Usando aspectos de prática deliberada para impulsionar 
+    o usuário a sair da zona de conforto enquanto 
+    motiva e acompanha a realização das tarefaz. 
+    O objetivo: {objetivo}
+  expected_output: >
+    Uma lista de mensagens, como se fosse frases imperativas do coach
+    que irá acompanhar o desenvolvimento do usuário e irá motivar.
+    Ache pontos durante a mensagens para realizar enviar essas 
+    mensagens. Dizendo melhor o que o usuário precisava 
+    fazer ele precisa se concentrar
+  agent: coach

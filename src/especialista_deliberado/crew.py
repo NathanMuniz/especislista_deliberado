@@ -34,6 +34,13 @@ class EspecialistaDeliberado():
 			config=self.agents_config['organiza_tarefaz'],
 			verbose=True
 		)
+	
+	@agent
+	def coach(self) -> Agent:
+		return Agent(
+			config=self.agents_config['coach'],
+			verbose=True
+		)
 
 	@task
 	def analisar_experts(self) -> Task:
@@ -51,6 +58,12 @@ class EspecialistaDeliberado():
 	def organiza_estudos(self) -> Task:
 		return Task(
 			config=self.tasks_config['organiza_estudos'],
+		)
+
+	@task
+	def instrucoes_coach(self) -> Task:
+		return Task(
+			config=self.tasks_config['instrucoes_coach'],
 		)
 
 	@crew
