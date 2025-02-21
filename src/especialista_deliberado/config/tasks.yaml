@@ -15,6 +15,7 @@ plano_estudos:
     Crie atividade e plano de estudo de prática deliberada 
     para o usuário se torna um expert sobre {topic} entendo o quem são os experts
     e o que eles são capaz de fazer. Sempre aplicando principios de pratica deliberada
+    Atividades para criar representações mentais como as dos especislitas.
   expected_output: >
     Uma lista de atividade do básico até o avançado aplicando princípios de prática deliberada
     em função do usuário ao seguir a lista aprender e ser um expert
