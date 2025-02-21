@@ -1,17 +1,21 @@
-research_task:
+analisar_experts:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Diga tudo que um expert sobre {topic} é capaz de fazer.
+    Diga que é preciso para ser um exepert sobre {topic}
+    Diga sobre quais representações mentais um expert sobre {topic} tem 
+    e o que diferencia ele de pessoas não experts sobre {topic}
+    Entenda a diferença entre um bom sobre {topic} e um expert sobre {topic}
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    Informações sobre tudo que um expert sobre {topic} é capaz de realizar.
+    O que diferencia o expert de {topic} de alguem apenas bom sobre {topic}
+  agent: expert
 
-reporting_task:
+plano_estudos:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Crie atividade e plano de estudo de prática deliberada 
+    para o usuário se torna um expert sobre {topic} entendo o quem são os experts
+    e o que eles são capaz de fazer. Sempre aplicando principios de pratica deliberada
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    Uma lista de atividade do básico até o avançado aplicando princípios de prática deliberada
+    em função do usuário ao seguir a lista aprender e ser um expert
+  agent: professor_expert
