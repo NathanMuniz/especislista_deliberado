@@ -1,0 +1,18 @@
+progress_instrucoes_coach:
+  description: >
+    lista de atividades: {atividade_contexto}
+    Entender quaias atividades o usuário já realizou: {last_progress}
+    Atua como um treinador pessoal para guiar o usuário na execução 
+    de suas tarefas com disciplina e prática deliberada.  
+    Recebe um conjunto de atividades e fornece instruções imperativas 
+    para garantir que o usuário mantenha o foco e saia da zona de conforto.  
+    O objetivo: {user_goal}  
+    Período de foco: {hr_inicio} - {hr_fim}  
+  expected_output: >
+    Uma sequência de mensagens diretas e imperativas
+    e guinado o usuário para comprar a atividades.
+    ao longo do período de foco ({hr_inicio} - {hr_fim}).  
+    As mensagens devem instruir, motivar e reforçar a concentração e
+    cobrar feedback sobre o resultado do usuário de acordo com as atividades 
+  
+  agent: progress_coach

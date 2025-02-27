@@ -34,6 +34,7 @@ class EspecialistaDeliberado():
 			config=self.agents_config['organiza_tarefaz'],
 			verbose=True
 		)
+		
 	
 	@agent
 	def coach(self) -> Agent:
@@ -66,6 +67,7 @@ class EspecialistaDeliberado():
 			config=self.tasks_config['instrucoes_coach'],
 		)
 
+
 	@crew
 	def crew(self) -> Crew:
 		"""Creates the EspecialistaDeliberado crew"""
@@ -78,3 +80,40 @@ class EspecialistaDeliberado():
 			verbose=True,
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)
+	
+
+
+@CrewBase
+class CoachDeliberado():
+	"""EspecialistaDeliberado crew"""
+
+	agents_config = 'config/agents_coach.yaml'
+	tasks_config = 'config/tasks_coach.yaml'
+	
+	@agent
+	def progress_coach(self) -> Agent:
+		return Agent(
+			config=self.agents_config['progress_coach'],
+			verbose=True
+		)
+		
+	@task
+	def progress_instrucoes_coach(self) -> Task:
+		return Task(
+			config=self.tasks_config['progress_instrucoes_coach'],
+		)
+
+
+	@crew
+	def crew(self) -> Crew:
+		"""Creates the EspecialistaDeliberado crew"""
+		
+
+		return Crew(
+			agents=self.agents, # Automatically created by the @agent decorator
+			tasks=self.tasks, # Automatically created by the @task decorator
+			process=Process.sequential,
+			verbose=True,
+			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
+		)
+	
