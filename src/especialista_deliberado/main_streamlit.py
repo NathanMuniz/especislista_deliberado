@@ -1,18 +1,22 @@
 import streamlit as st
 import warnings
-from crew import EspecialistaDeliberado
+from crew import Testcrew
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 def run(inputs):
-    """
-    Run the crew with user inputs.
-    """
+    """Run the crew with user inputs."""
     try:
-        EspecialistaDeliberado().crew().kickoff(inputs=inputs)
+        result = Testcrew().crew().kickoff(inputs=inputs)
         st.success("Crew iniciado com sucesso!")
+        return result
     except Exception as e:
         st.error(f"Ocorreu um erro: {e}")
+
+# Sidebar navigation
+st.sidebar.title("Navegação")
+st.sidebar.page_link("main_streamlit.py", label="Início")
+st.sidebar.page_link("pages/about.py", label="Sobre o Projeto")
 
 # Interface Streamlit
 st.title("Configuração do CrewAI")
@@ -31,6 +35,7 @@ if st.button("Iniciar Crew"):
             'hr_inicio': hr_inicio.strftime('%H:%M'),
             'hr_fim': hr_fim.strftime('%H:%M')
         }
-        run(inputs)
+        markdown_output = run(inputs)
+        st.markdown(markdown_output)
     else:
         st.warning("Por favor, selecione horários válidos.")
